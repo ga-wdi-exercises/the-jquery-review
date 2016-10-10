@@ -29,6 +29,11 @@ Bonuses:
 
 > Write a little bit of code, and then test it--work methodically.
 
+> use $ with variable names that refer to jQuery objects/collections (this is really just a suggested convention, and will not have an impact on code function).
+```js
+var $body = $("body");
+```
+
 >  Store references to each part of the DOM you need to interact with. Example:
 ```js
 var $paragraphs = $("p");
