@@ -27,10 +27,10 @@ Bonuses:
 
 ## Hints
 
-> 1. Store references to each part of the DOM you need to interact with. Example:
+> Write a little bit of code, and then test it--work methodically.
+
+>  Store references to each part of the DOM you need to interact with. Example:
 ```js
 var $paragraphs = $("p");
 var $hSix = $("h6");   
 ```
-
-> 2. Write a little bit of code, and then test it--work methodically.
