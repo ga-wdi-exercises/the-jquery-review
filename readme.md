@@ -12,6 +12,8 @@ Do NOT modify anything in the `<body>` of the html file.
 0. Clone down this repo.
 0. Link jQuery from a CDN (if you aren't sure how, try googling it first!) and link the `script.js` file in your `index.html`
 1. `console.log()` each element in the `names` array in `script.js` using a for-loop.
+> For the rest of the exercise, you will be writing your code below where the variables are defined in `script.js
+`
 2. `console.log()` the text inside each `<div>` using `.eq()` within a for-loop
   > Hint: Use jQuery to select all divs and store the result in a variable
 
