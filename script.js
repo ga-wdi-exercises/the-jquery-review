@@ -1,4 +1,4 @@
-var names = ["Edward", "Barefoot Contessa", "Alucard", "Shania", "Bobby Brown"];
+var names = ["Elvira", "Barefoot Contessa", "Alucard", "Shania", "Bobby Brown", "Roger Lodge"];
 
 var article = {
   header: {
