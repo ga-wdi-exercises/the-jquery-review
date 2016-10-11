@@ -2,12 +2,17 @@
 
 This review exercise will build on the first checkpoint and the jQuery we've learned thus far. We'll be using our javascript knowledge from Checkpoint-00 to access data and write it to the DOM using jQuery. The idea is access data contained in various data structures, and then taking that data and writing to the DOM.
 
-**Do not hard-code the data from `script.js` in `index.html`. The idea is to use javascript, rather than to copy and paste.**
-
-Do NOT modify anything in the `<body>` of the html file.
 
 
 ## Instructions
+
+### DONTs
+
+Do not hard-code the data from `script.js` in `index.html`. The idea is to use javascript, rather than to copy and paste.
+
+Do NOT modify anything in the `<body>` of the html file, unless directed to in the steps below.
+
+### DOs
 
 0. Clone down this repo.
 0. Link jQuery from a CDN (if you aren't sure how, try googling it first!) and link the `script.js` file in your `index.html`
