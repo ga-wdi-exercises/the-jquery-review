@@ -26,7 +26,7 @@ Bonuses:
 
 0. Write the title in the `<h3>` inside `<header>`.
 1. Write the author and editors of the article, contained in the `header` property and `editor` property of the object, to the header HTML element ***in italics***, using only javascript.
-2. Render the image, from the `body` property of the object, inside `article` to the `<figure>` element.
+2. Render the image, from the `body` property of the `article` object, to the `<figure>` element.
 
 ## Hints
 
