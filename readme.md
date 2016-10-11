@@ -25,7 +25,7 @@ Do NOT modify anything in the `<body>` of the html file, unless directed to in t
 3. Change the text inside a `<div>` to whatever text you'd like.
 
 4. Next, use a for-loop to write each element in the `names` array to each `<div>`, using jQuery.
-6. Access the text of the `article` object in `script.js` and write it to the `<main>` inside of `<article>`.
+6. Access the text of the `article` object in `script.js` and write it to the `<section>` inside of `<article>`.
 
 Bonuses:
 
