@@ -1,8 +1,8 @@
 # JS Review
 
-This review exercise will build on the first checkpoint and the jQuery we've learned thus far. We'll be using our javascript knowledge from Checkpoint-00 to access data and write it to the DOM using jQuery. The idea is access data contained in various data structures, and then taking that data and writing to the DOM.
+This review exercise is built around accessing data contained in various data structures, and then taking that data and writing to the DOM using jQuery.
 
-
+It builds on concepts in from the first checkpoint (Checkpoint-00) and ties them into DOM-manipulation concepts from Week 2. 
 
 ## Instructions
 
