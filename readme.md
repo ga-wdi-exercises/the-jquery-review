@@ -4,11 +4,12 @@ This review exercise will build on the first checkpoint and the jQuery we've lea
 
 **Do not hard-code the data from `script.js` in `index.html`. The idea is to use javascript, rather than to copy and paste.**
 
-Do NOT modify the html file.
+Do NOT modify anything in the `<body>` of the html file.
 
 
 ## Instructions
 
+0. Clone down this repo.
 0. Link jQuery from a CDN (if you aren't sure how, try googling it first!) and link the `script.js` file in your `index.html`
 1. `console.log()` each element in the `names` array in `script.js` using a for-loop.
 2. `console.log()` the text inside each `<div>` using `.eq()` within a for-loop
