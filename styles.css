@@ -1,5 +1,32 @@
-body {
+main {
   margin: auto;
-  text-align: center;
   width: 70%;
+  border: 2px solid black;
+}
+
+article {
+  margin: 10px;
+  border: 1px grey solid;
+  height: 444px;
+  padding: 20px;
+}
+
+header {
+  border-bottom: 1px black dashed;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+figure {
+  height: 333px;
+  width: 333px;
+  margin: 10px;
+  padding: 0px;
+  border: 1px grey dotted;
+  float: left;
+}
+
+h1 {
+  text-align: center;
+  font-style: italics;
 }
