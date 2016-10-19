@@ -2,7 +2,7 @@
 
 This review exercise is built around accessing data contained in various data structures, and then taking that data and writing to the DOM using jQuery.
 
-It builds on concepts in from the first checkpoints (Checkpoint-00 through 2) and ties them into DOM-manipulation concepts from Week 2.
+It builds on concepts from the first checkpoints (Checkpoint-00 through 2) and ties them into DOM-manipulation concepts from Week 2.
 
 ## Instructions
 
@@ -12,7 +12,7 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 
   0.  For testing purposes, `console.log()` each element in the `staff` array in `js/script.js` using a for-loop.
   0. Next, use the jQuery function `$()` to create `<span>` tags inside the `<header>` that is directly in the `<main>` tag. The text of each `<span></span>` should be each item in the `staff` array, respectively.
-  0. You should have added 6 `span`s and have one name from the `staff` in each `<span>`.
+  0. You should have added six `span`s and have one name from the `staff` in each `<span>`.
 
 ## Populating Article Content
 
