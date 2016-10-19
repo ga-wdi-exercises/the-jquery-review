@@ -2,42 +2,54 @@
 
 This review exercise is built around accessing data contained in various data structures, and then taking that data and writing to the DOM using jQuery.
 
-It builds on concepts in from the first checkpoint (Checkpoint-00) and ties them into DOM-manipulation concepts from Week 2. 
+It builds on concepts in from the first checkpoints (Checkpoint-00 through 2) and ties them into DOM-manipulation concepts from Week 2.
 
 ## Instructions
 
-### DONTs
+Clone down this repository. Your job is to write code in `script.js` that accomplishes the tasks listed below. Do not modify any other file.
 
-Do not hard-code the data from `script.js` in `index.html`. The idea is to use javascript, rather than to copy and paste.
+## Writing Staff
 
-Do NOT modify anything in the `<body>` of the html file, unless directed to in the steps below.
+0. Using
+  0.  For testing purposes, `console.log()` each element in the `staff` array in `script.js` using a for-loop.
+  0. Next, use the jQuery function `$()` to create `<span>` tags inside the `<header>` that is directly in the `<main>` tag. The text of each `<span></span>` should be each item in the `staff` array, respectively.
+  0. You should have added 6 `span`s and have one name from the `staff` in each `<span>`.
 
-### DOs
+## Populating Article Content
 
-0. Clone down this repo.
-0. Link jQuery from a CDN (if you aren't sure how, try googling it first!) and link the `script.js` file in your `index.html`
-1. `console.log()` each element in the `names` array in `script.js` using a for-loop.
-> For the rest of the exercise, you will be writing your code below where the variables are defined in `script.js
-`
-2. `console.log()` the text inside each `<div>` using `.eq()` within a for-loop
-  > Hint: Use jQuery to select all divs and store the result in a variable
+0. Populating Content for the First Article
+  0. Take the `text` of the first object in `articles` and write it to the `<section>` inside of the first `<article>`.
 
-3. Change the text inside a `<div>` to whatever text you'd like.
+  0. In the first `<article>`, set the text of the `<h3>` inside `<header>` to the `title` from the first object in `articles`.
 
-4. Next, use a for-loop to write each element in the `names` array to each `<div>`, using jQuery.
-6. Access the text of the `article` object in `script.js` and write it to the `<section>` inside of `<article>`.
+  0. Modify the `byline` property of the first `articles` by concatenating it with the 1st value in `staff`.
 
-Bonuses:
+  0. Take the new value of the `byline` property and add it to the text of the `<header>` within the first `<article>`.
 
-0. Write the `title` from `article` in the `<h3>` inside `<header>`.
-1. Write the author and editors of the article, contained in the `header` property and `editor` property of the object, to the `<header>` HTML element ***in italics***, using only javascript.
-2. Render the image, from the `body` property of the `article` object, to the `<figure>` element.
+  0. Add an `editor` property to the first object in `articles` and give it the value of the 2nd item in the `staff` array.
+
+  0. Create and append a `<span>` inside the `<header>` of the first `<article>`, where the new `<span>`'s text is the value of the `editor` property you just created.
+
+  0. Render the image, from the `body` property of the first object in `articles`, to the `<figure>` element in the first `<article>`.
+
+0. Using a for-loop to populate content for each article
+
+  0. Adapt the code you wrote in the previous section to work with a for loop that iterates over the objects in `articles`.
+
+
+## Bonuses
+
+0. Hovering over a paragraph changes its background color to lightGrey. When the mouse exits the paragraph, the color should revert back to its previous value.
+
+0. Use jQuery animate to have the staff names slide and fade into view. Check out [http://api.jquery.com/animate/](http://api.jquery.com/animate/)
+
+0. Add infinite scroll by re-appending the articles when the user scrolls to a certain point near the bottom.
 
 ## Hints
 
 > Write a little bit of code, and then test it--work methodically.
 
-> use $ with variable names that refer to jQuery objects/collections (this is really just a suggested convention, and will not have an impact on code function).
+> use $ in variable names that refer to jQuery objects/collections (this is a recommended convention, and will not have an impact on code function).
 ```js
 var $body = $("body");
 ```
@@ -45,5 +57,5 @@ var $body = $("body");
 >  Store references to each part of the DOM you need to interact with. Example:
 ```js
 var $paragraphs = $("p");
-var $hSix = $("h6");   
+var $smallestHeaders = $("h6");   
 ```

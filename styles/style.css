@@ -1,3 +1,20 @@
+@font-face {
+ font-family: Canterbury;
+  src: url(./fonts/Canterbury.ttf);
+}
+
+h1 {
+  font-family: Canterbury;
+  font-size: 72px;
+}
+
+header span {
+  text-decoration: underline;
+  font-size: 18px;
+  font-style: italic;
+  padding: 5px;
+}
+
 main {
   margin: auto;
   width: 70%;
@@ -13,7 +30,10 @@ article {
 
 header {
   border-bottom: 1px black dashed;
-  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
   margin-bottom: 20px;
 }
 
