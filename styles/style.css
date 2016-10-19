@@ -1,5 +1,5 @@
 @font-face {
- font-family: Canterbury;
+  font-family: Canterbury;
   src: url(./fonts/Canterbury.ttf);
 }
 
@@ -19,6 +19,7 @@ main {
   margin: auto;
   width: 70%;
   border: 2px solid black;
+  border-radius: 25px;
 }
 
 article {
