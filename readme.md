@@ -10,7 +10,7 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 
 ## Writing Staff
 
-0. Using
+0. Populate the Header with Staff Member Names
   0.  For testing purposes, `console.log()` each element in the `staff` array in `js/script.js` using a for-loop.
   0. Next, use the jQuery function `$()` to create `<span>` tags inside the `<header>` that is directly in the `<main>` tag. The text of each `<span></span>` should be each item in the `staff` array, respectively.
   0. You should have added 6 `span`s and have one name from the `staff` in each `<span>`.
@@ -18,7 +18,7 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 ## Populating Article Content
 
 0. Populating Content for the First Article
-  0. Take the `text` of the first object in `articles` and write it to the `<section>` inside of the first `<article>`.
+  0. Create a new paragraph element using `$()` and store it in a variable. Set its text to the `text` property of the first object in `articles` and ***append*** it to the `<section>` inside of the first `<article>`.
 
   0. In the first `<article>`, set the text of the `<h3>` inside `<header>` to the `title` from the first object in `articles`.
 
@@ -28,7 +28,7 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 
   0. Add an `editor` property to the first object in `articles` and give it the value of the 2nd item in the `staff` array.
 
-  0. Create and append a `<span>` inside the `<header>` of the first `<article>`, where the new `<span>`'s text is the value of the `editor` property you just created.
+  0. Create and ***append*** a `<span>` inside the `<header>` of the first `<article>`, where the new `<span>`'s text is the value of the `editor` property you just created.
 
   0. Render the image, from the `body` property of the first object in `articles`, to the `<figure>` element in the first `<article>`.
 
@@ -36,10 +36,13 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 
   0. Adapt the code you wrote in the previous section to work with a for loop that iterates over the objects in `articles`.
 
+0. Hovering the cursor over a paragraph changes its background color to lightGrey. When the mouse exits the paragraph, the color should revert back to its previous value.
+  0. Store the default background-color value in a variable.
+  0. Change the background color to light grey when the mouse hovers over the paragraph.
+  0. Determine the event that corresponds to the mouse exiting the area of a DOM element.
+  0. Add event listeners to listen for this type of event, and have the background color revert to its default value when this event occurs.
 
 ## Bonuses
-
-0. Hovering over a paragraph changes its background color to lightGrey. When the mouse exits the paragraph, the color should revert back to its previous value.
 
 0. Use jQuery animate to have the staff names slide and fade into view. Check out [http://api.jquery.com/animate/](http://api.jquery.com/animate/)
 

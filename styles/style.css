@@ -1,6 +1,6 @@
 @font-face {
   font-family: Canterbury;
-  src: url(./fonts/Canterbury.ttf);
+  src: url("./fonts/Canterbury.ttf");
 }
 
 h1 {
