@@ -20,7 +20,7 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 0. Populating Content for the First Article
   0. Create a new paragraph element using `$()` and store it in a variable. Set its text to the `text` property of the first object in `articles` and ***append*** it to the `<section>` inside of the first `<article>`.
   
-    > - You'll need to comment out the `height: 444px;` in styles/style.css to avoid overflow.
+    > - You'll need to comment out `height: 444px;` in the rule for `articles` in styles/style.css to avoid overflow.
 
   0. In the first `<article>`, set the text of the `<h3>` inside `<header>` to the `title` from the first object in `articles`.
 
