@@ -5,7 +5,7 @@ var articles = [
   {
     header: {
       title: "Gibberish",
-      byline: "by "
+      byline: "by ",
     },
     body: {
       imageUrl: "http://www.placebear.com/333/333",
@@ -35,3 +35,26 @@ var articles = [
 ]
 
 // Your code below
+for (let i = 0; i < staff.length; i++){
+    $("main > header").append("<span>" + staff[i] + "</span>");
+}
+
+// Iterate through each article.. hopefully
+// TODO: figure out how to access the different articles.
+let article = $("article");
+let section = $(".article-body");
+let header = $("article header");
+let title = $("h3");
+let figure = $("figure");
+
+for (let i = 0; i < articles.length; i++) {
+    let myText = $("<p></p>").text(articles[i].body.text);
+    let authoredBy = articles[i].header.byline.concat(staff[i]);
+    let myFigure = $("<span></span>").html("<img src='" + articles[i].body.imageUrl + "'>");
+    let articleTitle = articles[i].header.title;
+
+    $(header[i]).append(authoredBy);
+    $(figure[i]).append(myFigure);
+    $(section[i]).append(myText);
+    $(title[i]).append(articleTitle);
+}
