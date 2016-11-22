@@ -1,4 +1,5 @@
 // Begin writing your code after the variable declarations
+
 var staff = ["Richard Feynman", "Barefoot Contessa", "Patti Stanger", "Shania Twain Jr.", "Dean Ambrose", "Roger Lodge"];
 
 var articles = [
@@ -34,4 +35,12 @@ var articles = [
   }
 ]
 
+
+
 // Your code below
+for (i in staff){
+  $("header")[0].append(staff[i]);
+}
+$('article>section>header>h3')[0].append(articles[0].header.title)
+$('article>section>header>h3')[1].append(articles[1].header.title)
+$('article>section>header>h3')[2].append(articles[2].header.title)
