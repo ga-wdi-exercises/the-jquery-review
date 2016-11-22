@@ -32,6 +32,50 @@ var articles = [
       text: "Pour-over shoreditch labore mumblecore bitters, sint vexillologist do chillwave. Schlitz microdosing taxidermy, try-hard irure salvia yr twee XOXO af. Gastropub air plant asymmetrical, offal veniam dreamcatcher ad mumblecore accusamus stumptown retro meh food truck nihil single-origin coffee. Tofu kale chips fap minim. Aesthetic deserunt fingerstache pok pok. Placeat try-hard do banh mi. Deserunt jean shorts mollit, assumenda meggings aliqua austin sriracha.\n Hella YOLO shoreditch, jianbing XOXO before they sold out fugiat paleo small batch assumenda gochujang air plant anim irony voluptate. Seitan heirloom keytar kombucha blue bottle. Sint ullamco shoreditch hammock. Do live-edge prism neutra, sapiente paleo drinking vinegar lo-fi chambray typewriter photo booth. PBR&B man braid mumblecore, tilde copper mug magna intelligentsia sustainable lomo man bun pickled. Selfies exercitation cliche, iPhone everyday carry odio humblebrag gentrify taxidermy brooklyn ut freegan incididunt. Craft beer tumblr edison bulb fam."
     }
   }
-]
+];
+staffName();
+function staffName(){
+for (let i = 0; i < staff.length; i++){
+  $("header").first().append("<span>" + staff[i] + "</span>");
+  console.log(staff[i]);
+  }
+}
+let article = $("articles");
+let section = $("section");
+let title = $("title");
+let header = $("header");
+let figure = $("figure");
 
-// Your code below
+
+
+for (let i = 0; i < staff.length; i++){
+  let para = $("<p></p>").text(articles[0].body.text);
+  let bylineText = articles[1].header.byline.concat(staff[i]);
+
+  $(section[i]).append(para);
+
+
+  console.log(para);
+}
+$("h3").replaceWith("title.header[0]");
+
+byline(articles.editor[0] = staff[1]);
+articles.first = staff[0] + articles.prop[0];
+createElement.append.html("<span>" + editor + "</span>;");
+$("body").append("article.figure");
+
+
+// $("p").append("")
+
+
+
+
+
+
+// function appendText() {
+//     var txt1 = "<p>Text.</p>";               // Create element with HTML
+//     var txt2 = $("<p></p>").text("Text.");   // Create with jQuery
+//     var txt3 = document.createElement("p");  // Create with DOM
+//     txt3.innerHTML = "Text.";
+//     $("body").append(txt1, txt2, txt3);      // Append the new elements
+// }
