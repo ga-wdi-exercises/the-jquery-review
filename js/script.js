@@ -46,16 +46,55 @@ for (let i = 0; i < staff.length; i++) {
 }
 
 //console.log(articles[0].body.text);
-let textToFill = $("<p>" + articles[0].body.text + "</p>");
 
-let articleFill = function(textToFill){
 
-  $("article:first  section").append(textToFill);
+////I tried to create a function I could feed what I needed to add to a targets tag but I cant seem to get it working properly.
+
+let textToFill_1 = $("<p>" + articles[0].body.text + "</p>");
+let whatToFill_1 = $("article:first").find("section").append(textToFill_1);
+
+let articleFill = function(whatToFill, textToFill){
+
+  whatToFill.append(textToFill);
 
 }
-articleFill(textToFill);
+//Filling the paragraph
+articleFill(whatToFill_1, textToFill_1);
 
-// $("article:first  section").append('<p>''</p>')
-//'<p>' + articles[0].body.text + '</p>'
+//title showing double for some reason
+let textToFill_2 = articles[0].header.title; $("article:first").find("h3").text(textToFill_2);
 
-// Create a new paragraph element using `$()` and store it in a variable. Set its text to the `text` property of the first object in `articles` and ***append*** it to the `<section>` inside of the first `<article>`.
+//byline not working
+let textToFill_3 = articles[0].header.byline + ": " + staff[0];
+$("article:first").find("h3").append("<p>" + textToFill_3 + "</p>");
+
+//add the editor to the object
+articles[0].header.editor = staff[1];
+//NOT WORKING
+//let textToFill_4 = "<span>" + articles[0].header.editor + "</span>";
+$("aricle:first").find("header").append("<span>" + articles[0].header.editor + "</span>");
+// console.log(textToFill_4);
+
+// let imgPath = articles[0].body.imageUrl;
+// //place img tag ======  http://blog.teamtreehouse.com/using-jquery-asynchronously-loading-image   WhatI used to do this
+// let imgLoad = $("article:first").find("figure").html("<img src="">")
+// //load variable for imgTag
+// let imgLoad = $("article:first").find("img");
+//
+// imgPath.load(function(){
+// 	imgLoad.attr("src", $(this).attr("src"));
+// });
+//
+// $('<img src="'+ imgPath +'" class="original">').load(function() {
+//
+//     $("article:first").find("figure").append(this);
+// }
+
+// let imgToFill = <img src=articles[0].body.imageUrl>;
+// console.log(imgToFill);
+// let whereToFill = $("article:first").find("figure").append(imgToFill);
+
+//places the url in not loading the PIC --NOT WORKING
+// $("article:first").find("figure").html(imgToFill);
+// console.log(articles[0].header.title);
+//function to add text to the page by feeling it whatToFill and the textToFill
