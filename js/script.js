@@ -1,5 +1,8 @@
 // Begin writing your code after the variable declarations
 var staff = ["Richard Feynman", "Barefoot Contessa", "Patti Stanger", "Shania Twain Jr.", "Dean Ambrose", "Roger Lodge"];
+for (var i = 0; i < staff.length; i++) {
+  console.log(staff[i]);
+}
 
 var articles = [
   {
@@ -32,6 +35,17 @@ var articles = [
       text: "Pour-over shoreditch labore mumblecore bitters, sint vexillologist do chillwave. Schlitz microdosing taxidermy, try-hard irure salvia yr twee XOXO af. Gastropub air plant asymmetrical, offal veniam dreamcatcher ad mumblecore accusamus stumptown retro meh food truck nihil single-origin coffee. Tofu kale chips fap minim. Aesthetic deserunt fingerstache pok pok. Placeat try-hard do banh mi. Deserunt jean shorts mollit, assumenda meggings aliqua austin sriracha.\n Hella YOLO shoreditch, jianbing XOXO before they sold out fugiat paleo small batch assumenda gochujang air plant anim irony voluptate. Seitan heirloom keytar kombucha blue bottle. Sint ullamco shoreditch hammock. Do live-edge prism neutra, sapiente paleo drinking vinegar lo-fi chambray typewriter photo booth. PBR&B man braid mumblecore, tilde copper mug magna intelligentsia sustainable lomo man bun pickled. Selfies exercitation cliche, iPhone everyday carry odio humblebrag gentrify taxidermy brooklyn ut freegan incididunt. Craft beer tumblr edison bulb fam."
     }
   }
-]
+];
 
-// Your code below
+//var staff = ["Richard Feynman", "Barefoot Contessa", "Patti Stanger", "Shania Twain Jr.", "Dean Ambrose", "Roger Lodge"];
+function staffNames(){
+for (var i = 0; i < staff.length; i++){
+  span = '<span>' + staff[i]+ '</span>';
+$('main > header').first().append('span');
+}
+}
+
+var par = document.createElement('p').text($('articles').first().appendTo('section'));
+$('article').first().appendTo('section');
+
+var article = do
