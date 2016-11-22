@@ -34,4 +34,21 @@ var articles = [
   }
 ]
 
-// Your code below
+
+let goThroughStaff = function(staff){
+  for (let i = 0; i < staff.length; i++) {
+    console.log(staff[i]);
+  }
+};
+goThroughStaff(staff);
+
+//$("main > header").html("<span></span>");
+
+  for (let i = 0; i < staff.length; i++) {
+
+    $("main > header").append('<span>' + staff[i] + '</span>');
+
+  }
+
+
+//addStaff(staff);
