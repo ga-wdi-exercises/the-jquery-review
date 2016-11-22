@@ -34,7 +34,6 @@ var articles = [
   }
 ]
 
-
 let goThroughStaff = function(staff){
   for (let i = 0; i < staff.length; i++) {
     console.log(staff[i]);
@@ -42,13 +41,21 @@ let goThroughStaff = function(staff){
 };
 goThroughStaff(staff);
 
-//$("main > header").html("<span></span>");
+for (let i = 0; i < staff.length; i++) {
+  $("main > header").append('<span>' + staff[i] + '</span>');
+}
 
-  for (let i = 0; i < staff.length; i++) {
+//console.log(articles[0].body.text);
+let textToFill = $("<p>" + articles[0].body.text + "</p>");
 
-    $("main > header").append('<span>' + staff[i] + '</span>');
+let articleFill = function(textToFill){
 
-  }
+  $("article:first  section").append(textToFill);
 
+}
+articleFill(textToFill);
 
-//addStaff(staff);
+// $("article:first  section").append('<p>''</p>')
+//'<p>' + articles[0].body.text + '</p>'
+
+// Create a new paragraph element using `$()` and store it in a variable. Set its text to the `text` property of the first object in `articles` and ***append*** it to the `<section>` inside of the first `<article>`.
