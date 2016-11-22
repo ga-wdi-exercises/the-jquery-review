@@ -32,6 +32,45 @@ var articles = [
       text: "Pour-over shoreditch labore mumblecore bitters, sint vexillologist do chillwave. Schlitz microdosing taxidermy, try-hard irure salvia yr twee XOXO af. Gastropub air plant asymmetrical, offal veniam dreamcatcher ad mumblecore accusamus stumptown retro meh food truck nihil single-origin coffee. Tofu kale chips fap minim. Aesthetic deserunt fingerstache pok pok. Placeat try-hard do banh mi. Deserunt jean shorts mollit, assumenda meggings aliqua austin sriracha.\n Hella YOLO shoreditch, jianbing XOXO before they sold out fugiat paleo small batch assumenda gochujang air plant anim irony voluptate. Seitan heirloom keytar kombucha blue bottle. Sint ullamco shoreditch hammock. Do live-edge prism neutra, sapiente paleo drinking vinegar lo-fi chambray typewriter photo booth. PBR&B man braid mumblecore, tilde copper mug magna intelligentsia sustainable lomo man bun pickled. Selfies exercitation cliche, iPhone everyday carry odio humblebrag gentrify taxidermy brooklyn ut freegan incididunt. Craft beer tumblr edison bulb fam."
     }
   }
-]
+];
 
 // Your code below
+//Console log each value in staff array
+let testPrint = function(staff) {
+  for (let i = 0; i < staff.length; i++) {
+    console.log(staff[i]);
+  }
+};
+
+// Print each value in the staff array to the console
+let printStaff = function(staff) {
+  for (let i = 0; i < staff.length; i++) {
+    // Create span in the header of the main div
+    $("<span></span>").appendTo("main > header");
+    $("span").eq(i).append(staff[i]);
+  }
+};
+
+// Call function
+printStaff(staff);
+
+// Create element
+let p = $("<p></p>");
+
+// Append article body text to p
+p.append(articles[0].body.text);
+// Append p to the first article in html
+$("article:first-of-type").children("section").append(p);
+// Find h3 element in first article set text
+$("article:first-of-type").find("h3").text(articles[0].header.title);
+// Add first staff value to first article header
+articles[0].header.byline += staff[0];
+// Find header in first article append byline
+$("article:first-of-type").find("header").append(articles[0].header.byline);
+// Add property editor to articl
+articles[0].header.editor = staff[1];
+// Find header, add new span element
+$("article:first-of-type").find("header").append("<span></span>");
+// Append editor property to span in first article
+$("article:first-of-type").find("span").append(articles[0].header.editor);
+$("article:first-of-type").find("figure").append(`<img src="${articles[0].body.imageUrl}">`);
