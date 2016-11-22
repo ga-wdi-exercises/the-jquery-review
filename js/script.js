@@ -32,6 +32,48 @@ var articles = [
       text: "Pour-over shoreditch labore mumblecore bitters, sint vexillologist do chillwave. Schlitz microdosing taxidermy, try-hard irure salvia yr twee XOXO af. Gastropub air plant asymmetrical, offal veniam dreamcatcher ad mumblecore accusamus stumptown retro meh food truck nihil single-origin coffee. Tofu kale chips fap minim. Aesthetic deserunt fingerstache pok pok. Placeat try-hard do banh mi. Deserunt jean shorts mollit, assumenda meggings aliqua austin sriracha.\n Hella YOLO shoreditch, jianbing XOXO before they sold out fugiat paleo small batch assumenda gochujang air plant anim irony voluptate. Seitan heirloom keytar kombucha blue bottle. Sint ullamco shoreditch hammock. Do live-edge prism neutra, sapiente paleo drinking vinegar lo-fi chambray typewriter photo booth. PBR&B man braid mumblecore, tilde copper mug magna intelligentsia sustainable lomo man bun pickled. Selfies exercitation cliche, iPhone everyday carry odio humblebrag gentrify taxidermy brooklyn ut freegan incididunt. Craft beer tumblr edison bulb fam."
     }
   }
-]
+];
 
 // Your code below
+
+for(let i = 0; i < staff.length; i++) {
+  console.log(staff[i]);
+}
+
+let mainHeader = $('main > header');
+for(let i = 0; i < staff.length; i++) {
+  mainHeader.append($(`<span>${staff[i]}</span>`));
+}
+
+/*
+let firstArticle = $('article:first-of-type');
+firstArticle.children('section').append(articles[0].body.text);
+firstArticle.find('h3').text(articles[0].header.title);
+
+articles[0].header.byline += staff[0];
+firstArticle.find('header').append(articles[0].header.byline);
+
+articles[0].header.editor = `Edited by ${staff[1]}`;
+firstArticle.find('header').append($(`<span>${articles[0].header.editor}</span>`));
+
+firstArticle.find('figure').append(`<img src="${articles[0].body.imageUrl}">`);
+*/
+
+let articleElems = $('article');
+for(let i = 0; i < $('article').length; i++) {
+  let article = $(`article:nth-of-type(${i+1})`);
+  article.children('section').append(articles[i].body.text);
+  article.find('h3').text(articles[i].header.title);
+  articles[i].header.byline += staff[i];
+  article.find('header').append(articles[i].header.byline);
+  articles[i].header.editor = `Edited by ${staff[i]}`;
+  article.find('header').append($(`<span>${articles[i].header.editor}</span>`));
+  article.find('figure').append(`<img src="${articles[i].body.imageUrl}">`);
+}
+
+$('section').hover(function() {
+    $(this).css("background-color", "lightGray");
+  },
+  function() {
+    $(this).css("background-color", "white");
+  });
