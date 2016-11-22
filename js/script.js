@@ -1,6 +1,9 @@
 // Begin writing your code after the variable declarations
 var staff = ["Richard Feynman", "Barefoot Contessa", "Patti Stanger", "Shania Twain Jr.", "Dean Ambrose", "Roger Lodge"];
 
+
+
+
 var articles = [
   {
     header: {
@@ -35,3 +38,25 @@ var articles = [
 ]
 
 // Your code below
+
+
+for (i = 0; i < staff.length; i++) {
+  console.log(staff[i]);
+$("header:first").append("<span>"+staff[i]+"<span>");
+};
+
+for (i = 0; i < articles.length; i++) {
+  el= $('<p>');
+$(el).text(articles[i].body.text);
+$("section").eq(i).append(el);
+
+$("h3").eq(i).text(articles[i].header.title);
+
+ articles[i].header.byline += staff[2*i];
+$("article header").eq(i).append(articles[i].header.byline);
+
+articles[i].header.editor = staff [2*i+1];
+ $("article header").eq(i).append($("<span>").text(articles[i].header.editor));
+
+$('figure').eq(i).append($('<img />').attr('src',articles[i].body.imageUrl));
+}
