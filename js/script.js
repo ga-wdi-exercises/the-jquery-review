@@ -32,6 +32,51 @@ var articles = [
       text: "Pour-over shoreditch labore mumblecore bitters, sint vexillologist do chillwave. Schlitz microdosing taxidermy, try-hard irure salvia yr twee XOXO af. Gastropub air plant asymmetrical, offal veniam dreamcatcher ad mumblecore accusamus stumptown retro meh food truck nihil single-origin coffee. Tofu kale chips fap minim. Aesthetic deserunt fingerstache pok pok. Placeat try-hard do banh mi. Deserunt jean shorts mollit, assumenda meggings aliqua austin sriracha.\n Hella YOLO shoreditch, jianbing XOXO before they sold out fugiat paleo small batch assumenda gochujang air plant anim irony voluptate. Seitan heirloom keytar kombucha blue bottle. Sint ullamco shoreditch hammock. Do live-edge prism neutra, sapiente paleo drinking vinegar lo-fi chambray typewriter photo booth. PBR&B man braid mumblecore, tilde copper mug magna intelligentsia sustainable lomo man bun pickled. Selfies exercitation cliche, iPhone everyday carry odio humblebrag gentrify taxidermy brooklyn ut freegan incididunt. Craft beer tumblr edison bulb fam."
     }
   }
-]
-
+];
 // Your code below
+
+for (let i =0; i<staff.length; i++) {
+  console.log(staff[i]);
+  $("header:first").append("<span>"+staff[i]+"</span>");
+}
+
+
+// el = $('<p>');
+// $(el).text(articles[0].body.text);
+// $("section:first").append(el);
+// $("h3:first").text(articles[0].header.title);
+// articles[0].header.byline += staff[0];
+// $("article header:first").append(articles[0].header.byline);
+// articles[0].header.editor = staff[1];
+// $('article header:first').append($('<span>').text(articles[0].header.editor));
+// $('<img />').attr('src',articles[0].body.imageUrl).appendTo("figure:first");
+
+
+//$("article").css("height",'');
+//$("article").removeAttr("height");
+
+/*height: 444px;*/
+
+
+for (i=0; i<articles.length; i++) {
+  el = $('<p>');
+  $(el).text(articles[i].body.text);
+  $("section").eq(i).append(el);
+  $("h3").eq(i).text(articles[i].header.title);
+  articles[i].header.byline += staff[2*i];
+  $("article header").eq(i).append(articles[i].header.byline);
+  articles[i].header.editor = staff[2*i+1];
+  $('article header').eq(i).append($('<span>').text(articles[i].header.editor));
+  $('figure').eq(i).append($('<img />').attr('src',articles[i].body.imageUrl));
+}
+
+let orgBackgroundColor = $("p").css("background-color");
+$("p").hover(function(){
+    $(this).css("background-color","rgba(200,200,200,1)");
+  },
+  function(){
+    $(this).css("background-color",orgBackgroundColor);
+  });
+
+  $("header:first span").css("opacity",0);
+  $("header:first span").animate({opacity: '1.0'}, 2000);
