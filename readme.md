@@ -4,7 +4,7 @@ This review exercise is built around accessing data contained in various data st
 
 It builds on concepts from the first checkpoints (Checkpoint-00 through 2) and ties them into DOM-manipulation concepts from Week 2.
 
-## Instructions
+# Instructions
 
 Clone down this repository. Your job is to write code in `js/script.js` that accomplishes the tasks listed below. Do not modify any other file.
 
@@ -12,15 +12,23 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 
 0. Populate the Header with Staff Member Names
   0.  For testing purposes, `console.log()` each element in the `staff` array in `js/script.js` using a for-loop.
+    - `$ open index.html`, refresh in browser, and then open the console (`CMD+OPT+J`) to check your work.
   0. Next, use the jQuery function `$()` to create `<span>` tags inside the `<header>` that is directly in the `<main>` tag. The text of each `<span></span>` should be each item in the `staff` array, respectively.
-  0. You should have added six `span`s and have one name from the `staff` in each `<span>`.
+    > In the for loop you just wrote, do the following:
+
+    - Use the jQuery function (`$()`) to create a new <span> (refer back to pixart), then store the newly created element in a variable (`newSpan` would be a good variable name).
+    - Change `newSpan`'s text to equal the current staff member being iterated over in the for-loop, using `.text()`. The current staff member in the array that the loop is iterating over will be passed in as an argument to `.text()`.
+    - Use `$()` to select the `<header>` directly inside of `<main>`, then store this in a variable (named `mainHeader`, for example).
+    - Append the new spans to `mainHeadr` using `.append()`. You'll have to pass in the newSpan as an argument to `.append()`.
+
+  The end result should be 6 `<span>`s inside the main header, where there is one name from the `staff` array in each `<span>`.
+
 
 ## Populating Article Content
 
 0. Populating Content for the First Article
   0. Create a new paragraph element using `$()` and store it in a variable. Set its text to the `text` property of the first object in `articles` and ***append*** it to the `<section>` inside of the first `<article>`.
-  
-    > - You'll need to comment out `height: 444px;` in the rule for `articles` in styles/style.css to avoid overflow.
+
 
   0. In the first `<article>`, set the text of the `<h3>` inside `<header>` to the `title` from the first object in `articles`.
 
