@@ -25,7 +25,7 @@ main {
 article {
   margin: 10px;
   border: 1px grey solid;
-  height: 444px;
+  min-height: 444px;
   padding: 20px;
 }
 
