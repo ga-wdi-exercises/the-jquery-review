@@ -8,7 +8,9 @@ It builds on concepts from the first checkpoints (Checkpoint-00 through 2) and t
 
 Clone down this repository. Your job is to write code in `js/script.js` that accomplishes the tasks listed below. Do not modify any other file.
 
-## Writing Staff
+## Writing the Staff Members to the DOM
+
+The goal of this section is show how to get data from a javascript data-structure and place that onto a specific place on the **DOM** (document object model), using jQuery.
 
 0. Populate the Header with Staff Member Names
   0.  For testing purposes, `console.log()` each element in the `staff` array in `js/script.js` using a for-loop.
@@ -16,7 +18,7 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
   0. Next, use the jQuery function `$()` to create `<span>` tags inside the `<header>` that is directly in the `<main>` tag. The text of each `<span></span>` should be each item in the `staff` array, respectively.
     > In the for loop you just wrote, do the following:
 
-    - Use the jQuery function (`$()`) to create a new <span> (refer back to pixart), then store the newly created element in a variable (`newSpan` would be a good variable name).
+    - Use **the** jQuery function `$()` to create a new `<span>` (refer back to [pixart](https://github.com/ga-wdi-exercises/pixart_js/)), then store the newly created element in a variable (`newSpan` would be a good variable name).
     - Change `newSpan`'s text to equal the current staff member being iterated over in the for-loop, using `.text()`. The current staff member in the array that the loop is iterating over will be passed in as an argument to `.text()`.
     - Use `$()` to select the `<header>` directly inside of `<main>`, then store this in a variable (named `mainHeader`, for example).
     - Append the new spans to `mainHeadr` using `.append()`. You'll have to pass in the newSpan as an argument to `.append()`.
@@ -27,10 +29,14 @@ Clone down this repository. Your job is to write code in `js/script.js` that acc
 ## Populating Article Content
 
 0. Populating Content for the First Article
-  0. Create a new paragraph element using `$()` and store it in a variable. Set its text to the `text` property of the first object in `articles` and ***append*** it to the `<section>` inside of the first `<article>`.
+  0. Create a new paragraph element using `$()` and store it in a variable (let's say `newPara`). Change the text (using `.text()`) of `newPara` to equal the value of the `text` property of the first object in the javascript array `articles` and ***append*** it to the `<section>` inside of the first `<article>`.
+  > Breaking it down
+      - Use `$()` to select all the articles, but then use `.eq()` to target the first article. Finally, store this reference to the first article in a variable.
+      - Get the first item in the articles array. This item is an object with text property. Store this text property of the first object in the `articles` array in a variable.
 
 
   0. In the first `<article>`, set the text of the `<h3>` inside `<header>` to the `title` from the first object in `articles`.
+
 
   0. Modify the `byline` property of the first `articles` by concatenating it with the 1st value in `staff`.
 
