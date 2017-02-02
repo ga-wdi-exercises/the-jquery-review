@@ -35,3 +35,40 @@ var articles = [
 ]
 
 // Your code below
+// Part 1
+for(var i = 0; i < staff.length; i++) {
+  var newSpan = $('<span></span>').text(staff[i])
+  $('header').eq(0).append(newSpan)
+}
+
+// Part 2
+
+for(var i = 0; i < articles.length; i++) {
+    // Step 1
+    var newPara = $('<p></p>')
+    newPara.text(articles[i].body.text)
+    $('article').eq(i).find('section').eq(0).append(newPara)
+    //Step 2
+    $('article').eq(i).find('h3').text(articles[i].header.title)
+    // Step 3
+    articles[i].header.byline = articles[i].header.byline + staff[i]
+    // Step 4
+    var newByline = articles[i].header.byline
+    $('article').eq(i).find('header').append(newByline)
+    // Step 5
+    articles[i].editor = staff[1]
+    var editorSpan = $('<span></span>').text(articles[i].editor)
+    $('article').eq(i).find('header').append(editorSpan)
+    // Step 6
+    $('article').eq(i).find('figure').css('background', `url(${articles[i].body.imageUrl})`)
+    $('article').eq(i).find('figure').css('background-size', 'cover')
+}
+
+$('p').hover(
+  function() {
+    $(this).css('background', 'lightgrey')
+  },
+  function() {
+    $(this).css('background', 'none')
+  }
+)
