@@ -1,6 +1,7 @@
 // Begin writing your code after the variable declarations
 var staff = ["Richard Feynman", "Barefoot Contessa", "Patti Stanger", "Shania Twain Jr.", "Dean Ambrose", "Roger Lodge"];
 
+
 var articles = [
   {
     header: {
@@ -35,3 +36,11 @@ var articles = [
 ]
 
 // Your code below
+for(let i=0;i<staff.length;i++){
+  console.log(staff[i]);
+}
+
+let mainHeader = $('main > header');
+for(let i = 0; i < staff.length; i++) {
+   mainHeader.append($(`<span>${staff[i]}</span>`));
+ }
