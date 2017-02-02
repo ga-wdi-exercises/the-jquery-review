@@ -34,4 +34,10 @@ var articles = [
   }
 ]
 
-// Your code below
+staffName();
+function staffName() {
+  for(i=0; i<staff.length; i++){
+  name = '<span>'+staff[i]+'</span>';
+  $('main > header').append(name);
+  }
+}
