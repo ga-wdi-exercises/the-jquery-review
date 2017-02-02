@@ -1,6 +1,5 @@
 // Begin writing your code after the variable declarations
 var staff = ["Richard Feynman", "Barefoot Contessa", "Patti Stanger", "Shania Twain Jr.", "Dean Ambrose", "Roger Lodge"];
-
 var articles = [
   {
     header: {
@@ -32,6 +31,17 @@ var articles = [
       text: "Pour-over shoreditch labore mumblecore bitters, sint vexillologist do chillwave. Schlitz microdosing taxidermy, try-hard irure salvia yr twee XOXO af. Gastropub air plant asymmetrical, offal veniam dreamcatcher ad mumblecore accusamus stumptown retro meh food truck nihil single-origin coffee. Tofu kale chips fap minim. Aesthetic deserunt fingerstache pok pok. Placeat try-hard do banh mi. Deserunt jean shorts mollit, assumenda meggings aliqua austin sriracha.\n Hella YOLO shoreditch, jianbing XOXO before they sold out fugiat paleo small batch assumenda gochujang air plant anim irony voluptate. Seitan heirloom keytar kombucha blue bottle. Sint ullamco shoreditch hammock. Do live-edge prism neutra, sapiente paleo drinking vinegar lo-fi chambray typewriter photo booth. PBR&B man braid mumblecore, tilde copper mug magna intelligentsia sustainable lomo man bun pickled. Selfies exercitation cliche, iPhone everyday carry odio humblebrag gentrify taxidermy brooklyn ut freegan incididunt. Craft beer tumblr edison bulb fam."
     }
   }
-]
 
+];
 // Your code below
+for (let i = 0; i < staff.length; i++){
+    $("main header").first().append("<span>" + staff[i] + "</span>");
+}
+ let section = document.createElement("p");
+ article.section[0].append(articles[0].body.text);
+ //Assigned variables first
+ let article = $("article-body");
+ let section = $(".article-body");
+ let header = $("article header");
+
+ for firstArticle = document.createElement("<p></p>");
